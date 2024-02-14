@@ -39,7 +39,7 @@ const Hero = () => {
   ]
 
   const settings = {
-    dots:false,
+    dots:true,
     infinite:true,
     slidesToShow:1,
     slidesToScroll: 1,
@@ -82,9 +82,10 @@ const Hero = () => {
 
   return (
    <div className="" id='HERO'>
+    {/* <h1 className="text-2xl text-blue-400 text-center my-5 -z-5 bg-white w-52 rounded m-auto ">Movies Gallery</h1> */}
       <Slider {...settings}>
         {data.map((elm,i)=>(
-          <Image src={elm.image} key={i} alt="background" className=' h-[20rem] md:h-[24rem] w-full ' width={900} height={1000}/>
+          <Image src={elm.image} key={i} alt="background" className=' h-[14rem] md:h-[26rem] w-full ' width={900} height={1000}/>
         
         ))}
       </Slider>

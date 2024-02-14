@@ -36,15 +36,15 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
 
   return (
     <div className="seating-arrangement p-0.5 mt-10 w-full flex justify-center flex-col items-center">
-      <h2 className="text-center mb-5 font-bold text-white text-xl">Seating Arrangement</h2>
-      <div className='flex flex-col lg:flex-row gap-0 lg:gap-0 justify-around p-2'>
+      <h2 className="text-center mb-5 font-bold text-white text-2xl">Seating Arrangement</h2>
+      <div className='flex flex-col-reverse lg:flex-row  gap-0 lg:gap-0 justify-around p-2'>
 
           <div classNmae="flex flex-col ">
              <BookingForm selectedSeats={selectedSeats} handleBooking={handleBooking} />
               {/* <BookingDetails bookings={bookings} /> */}
           </div>
 
-          <div className="bg-slate-200 p-1 md:p-5 py-2 lg:px-8 md:py-5  lg:rounded-tr-xl  lg:rounded-br-xl">
+          <div className="bg-slate-200 p-1 md:p-5 py-2 lg:px-8 md:py-5 border-2 border-white  lg:rounded-tr-xl  lg:rounded-br-xl">
 
           {rows.map((row, rowIndex) => (
             <>

@@ -35,9 +35,9 @@ const BookingForm = ({ selectedSeats, handleBooking }) => {
   };
 
   return (
-    <div className='flex flex-col  justify-between   lg:border-black lg:rounded-tl-xl  lg:rounded-bl-xl bg-slate-200 h-[22rem] lg:h-[25rem] p-5'>
-      <h1 className="font-bold text-xl text-center">Tickets Booking Form</h1>
-      <form onSubmit={handleBooking1} className='flex flex-col p-5 rounded-xl border-2 border-blue-400 gap-2 mt-2 text-sm'>
+    <div className='flex flex-col  justify-between border-2 border-white   lg:rounded-tl-xl  lg:rounded-bl-xl bg-blue-300 h-[25rem] p-5'>
+      <h1 className="font-bold text-xl text-center text-white">Tickets Booking Form</h1>
+      <form onSubmit={handleBooking1} className='flex flex-col p-5 rounded-xl  gap-2 mt-2 text-sm'>
       <label>Enter Your Name</label>
       <input
         type="text"
