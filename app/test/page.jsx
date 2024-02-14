@@ -37,19 +37,14 @@ const TestPage = () => {
   console.log(allBookingSeats)
   return (
     <div>
-      <h1 className='font-bold text-3xl text-center text-white'>Book My Movie</h1>
+      {/* <h1 className='font-bold text-3xl text-center text-white'>Book My Movie</h1> */}
       <div>
-        <SeatingArrangement 
-          selectedSeats={selectedSeats} 
-          onSeatSelect={handleSeatSelect} 
-          onSeatDeselect={handleSeatDeselect} 
-          allBookingSeats={allBookingSeats}
-          // selectedSeats={selectedSeats}
-          handleBooking={handleBooking}
-          bookings={bookings}
+        <SeatingArrangement selectedSeats={selectedSeats} onSeatSelect={handleSeatSelect} 
+          onSeatDeselect={handleSeatDeselect} allBookingSeats={allBookingSeats}
+          handleBooking={handleBooking} bookings={bookings}
         />
         <div className="flex flex-col justify-center gap-5 items-center w-full   p-5">
-        <h2 className='font-bold text-xl text-black'>Booking Details</h2>
+        <h2 className='font-bold text-xl text-white'>Booking Details</h2>
         <BookingDetails bookings={bookings} />
         {/* <BookingForm selectedSeats={selectedSeats} handleBooking={handleBooking} /> */}
         </div>

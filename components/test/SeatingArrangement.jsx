@@ -36,7 +36,7 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
 
   return (
     <div className="seating-arrangement p-0.5 mt-10 w-full flex justify-center flex-col items-center">
-      <h2 className="text-center mb-5 font-bold text-xl">Seating Arrangement</h2>
+      <h2 className="text-center mb-5 font-bold text-white text-xl">Seating Arrangement</h2>
       <div className='flex flex-col lg:flex-row gap-0 lg:gap-0 justify-around p-2'>
 
           <div classNmae="flex flex-col ">
@@ -48,12 +48,12 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
 
           {rows.map((row, rowIndex) => (
             <>
-            <span className={` ${row == "A"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-400 w-24 md:w-32 m-auto rounded-xl p-1`}>{row=== "A"?"Premium Class":""}</span>
+            <span className={` ${row == "A"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-500 w-24 md:w-32 m-auto rounded-xl p-1`}>{row=== "A"?"Premium Class":""}</span>
 
-            <span className={` ${row == "C"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-400 w-24 md:w-32 m-auto rounded-xl p-1`}>Gold Class</span>
+            <span className={` ${row == "C"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-500 w-24 md:w-32 m-auto rounded-xl p-1`}>Gold Class</span>
             
 
-            <span className={` ${row == "F"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px]  md:text-xs text-white bg-blue-400 w-24 md:w-32 m-auto rounded-xl p-1`}>Silver Class</span>
+            <span className={` ${row == "F"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px]  md:text-xs text-white bg-blue-500 w-24 md:w-32 m-auto rounded-xl p-1`}>Silver Class</span>
 
             <div key={row} className={`row flex items-center justify-around 
              ${row == "B"? "pb-5 md:pb-3 ":"mb-1"} 
