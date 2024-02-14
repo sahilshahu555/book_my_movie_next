@@ -37,7 +37,7 @@ const TestPage = () => {
   console.log(allBookingSeats)
   return (
     <div>
-      <h1 className='font-bold text-3xl text-center'>Book My Movie</h1>
+      <h1 className='font-bold text-3xl text-center text-white'>Book My Movie</h1>
       <div>
         <SeatingArrangement 
           selectedSeats={selectedSeats} 
