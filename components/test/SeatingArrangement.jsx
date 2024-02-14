@@ -51,6 +51,7 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
             <span className={` ${row == "A"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-400 w-24 md:w-32 m-auto rounded-xl p-1`}>{row=== "A"?"Premium Class":""}</span>
 
             <span className={` ${row == "C"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-400 w-24 md:w-32 m-auto rounded-xl p-1`}>Gold Class</span>
+            
 
             <span className={` ${row == "F"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px]  md:text-xs text-white bg-blue-400 w-24 md:w-32 m-auto rounded-xl p-1`}>Silver Class</span>
 
