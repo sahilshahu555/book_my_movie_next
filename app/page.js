@@ -7,7 +7,7 @@ import { useGlobalContext } from '@/app/context/store'
 
 const Home = () => {
 
-  const {setBookings,} =useGlobalContext()
+  const {bookings,setBookings,allBookingSeats} =useGlobalContext()
 
   const fetchBooking= async()=>{
     try {
@@ -27,6 +27,17 @@ const Home = () => {
     fetchBooking();
     
   }, [setBookings])
+
+  const allBooking= async()=>{
+    await bookings?.forEach((elm)=>{
+      console.log(elm.selectedSeats)
+      // setAllBookingSeats([...allBookingSeats,...elm.selectedSeats])
+      allBookingSeats.push(...elm.selectedSeats)
+    })
+  }
+
+   useEffect(() => { allBooking() }, [bookings])
+
  
   return (
     <div>

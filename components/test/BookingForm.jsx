@@ -11,8 +11,6 @@ const BookingForm = ({ selectedSeats, handleBooking }) => {
 
   const saveBooking= async(booking)=>{
     try {
-           
-
       const res = await fetch(`/api/movie`, {
           method: 'POST',
           headers: {
@@ -27,6 +25,9 @@ const BookingForm = ({ selectedSeats, handleBooking }) => {
       if(data?.message === "Booking created successfully"){
       // router.push('/')
       }
+
+
+
   } catch (error) {
       alert(error.message) // Error Message
       console.log(error)
@@ -48,7 +49,6 @@ const BookingForm = ({ selectedSeats, handleBooking }) => {
       const booking={ username, selectedSeats, date, time }
       handleBooking(booking);
       saveBooking(booking);
-  
       setUsername('')
       setNumTickets(1)
       setDate('')

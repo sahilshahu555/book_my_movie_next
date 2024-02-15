@@ -8,16 +8,47 @@ import { useGlobalContext } from '@/app/context/store'
 const TestPage = () => {
   const {bookings, setBookings,allBookingSeats, setAllBookingSeats,selectedSeats, setSelectedSeats} =useGlobalContext();
 
-  
-  const allBooking= ()=>{
-    bookings?.map((elm)=>(
-      setAllBookingSeats([...allBookingSeats, ...elm.selectedSeats])
-    ))
+  const fetchBooking= async()=>{
+    try {
+      const res = await fetch(`/api/movie`)
+      // Create Data 
+      const data = await res.json();
+      setBookings(data.data)
+      
+    } catch (error) {
+        alert(error.message) // Error Message
+        console.log(error)
+    }
+   
   }
 
-  useEffect(() => { allBooking() }, [setBookings])
+  useEffect(() => {
+    fetchBooking();
+    
+  }, [setBookings])
   
- 
+  const allBooking= async()=>{
+    await bookings?.forEach((elm)=>{
+      console.log(elm.selectedSeats)
+      // setAllBookingSeats([...allBookingSeats,...elm.selectedSeats])
+      allBookingSeats.push(...elm.selectedSeats)
+    })
+  }
+
+   useEffect(() => { allBooking() }, [bookings])
+
+// updating book seats on UI start
+   const allBooking1= async()=>{
+    await bookings?.forEach((elm)=>{
+     
+      setAllBookingSeats([...allBookingSeats,...elm.selectedSeats])
+     
+    })
+  }
+
+   useEffect(() => { allBooking1() }, [bookings])
+
+   // updating book seats on UI end
  
  
   const handleBooking = async(booking) => {
@@ -43,6 +74,8 @@ const TestPage = () => {
         <SeatingArrangement selectedSeats={selectedSeats} onSeatSelect=    {handleSeatSelect}  onSeatDeselect={handleSeatDeselect} allBookingSeats={allBookingSeats} handleBooking={handleBooking} bookings={bookings} />
        
         <BookingDetails bookings={bookings} />
+
+        
       
     </div>
   );

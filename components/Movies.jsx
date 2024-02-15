@@ -52,7 +52,7 @@ const Movies = () => {
         {data.map((elm,i)=>(
           <div key={i}>
          <Link href={`/bookmovie/movie1`}>
-           <Image  className=" w-40 md:w-56 m-4 md:m-5  h-[18rem] md:h-[20rem] rounded-xl shadow-lg shadow-blue-300 " src={elm.image} alt="photo" width={200} height={200}/>
+           <Image  className=" w-40 md:w-52 mx-2.5 my-5 md:m-5  h-[18rem] md:h-[20rem] rounded-xl shadow-lg shadow-red-500 " src={elm.image} alt="photo" width={200} height={200}/>
          </Link>
          </div>
         ))}
