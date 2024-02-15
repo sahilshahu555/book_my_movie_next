@@ -36,7 +36,7 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
 
   return (
     <div className="seating-arrangement p-0.5 mt-10 w-full flex justify-center flex-col items-center">
-      <h2 className="text-center mb-5 font-bold text-white text-2xl">Seating Arrangement</h2>
+      <h2 className="text-center mb-5 font-bold text-blue-400 text-2xl">Seating Arrangement</h2>
       <div className='flex flex-col-reverse lg:flex-row  gap-0 lg:gap-0 justify-around p-2'>
 
           <div classNmae="flex flex-col ">

@@ -44,7 +44,7 @@ const TestPage = () => {
           handleBooking={handleBooking} bookings={bookings}
         />
         <div className="flex flex-col justify-center gap-5 items-center w-full   p-5">
-      
+        
         <BookingDetails bookings={bookings} />
         {/* <BookingForm selectedSeats={selectedSeats} handleBooking={handleBooking} /> */}
         </div>

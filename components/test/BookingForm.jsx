@@ -58,7 +58,7 @@ const BookingForm = ({ selectedSeats, handleBooking }) => {
       />
       <label>Select Movie Timing</label>
       <select className='border rounded-md p-0.5 ' value={time} onChange={(e) => setTime(e.target.value)}>
-        
+          <option  value="">select</option>
           <option  value="12 pm">12 pm</option>
           <option  value="3 pm">3 pm</option>
           <option  value="6 pm">6 pm</option>

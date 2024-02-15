@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -6,8 +7,9 @@ const Navbar = () => {
   return (
     <div className='Navbar flex py-3  justify-around  z-50 items-center bg-blue-300  sticky top-0'>
         <div className='logo'>
-            <h1 className='text-blue-400   text-xl font-[900] bg-white  px-2 rounded-xl flex'>Book <Image width={30} height={10} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIw5fZnR-DK3elMUUx0mdigA42aRQIZvlompLRDhqEU5asPEcTUCWk&usqp=CAE&s"
-          /> Movie</h1>
+          <Link href="/">
+              <h1 className='text-blue-400   text-xl font-[900] bg-white  px-2 rounded-xl flex'>Book <Image width={30} height={10} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIw5fZnR-DK3elMUUx0mdigA42aRQIZvlompLRDhqEU5asPEcTUCWk&usqp=CAE&s"/> Movie</h1>
+           </Link>
         </div>
         <div className='Laptop flex justify-between items-center gap-32 '>
 

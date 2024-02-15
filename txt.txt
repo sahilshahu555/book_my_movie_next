@@ -1,0 +1,2 @@
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+MONGO_URL=mongodb+srv://sahilshahu555:harsh123123123@cluster0.ehyj2m8.mongodb.net

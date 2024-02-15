@@ -7,7 +7,6 @@ import BookingForm from '@/components/test/BookingForm';
 const TestPage = () => {
   const [bookings, setBookings] = useState([]);
   const [allBookingSeats, setAllBookingSeats] = useState([]);
-
   const [selectedSeats, setSelectedSeats] = useState([]);
   
   const allBooking=()=>{
@@ -44,7 +43,7 @@ const TestPage = () => {
           handleBooking={handleBooking} bookings={bookings}
         />
         <div className="flex flex-col justify-center gap-5 items-center w-full   p-5">
-      
+        
         <BookingDetails bookings={bookings} />
         {/* <BookingForm selectedSeats={selectedSeats} handleBooking={handleBooking} /> */}
         </div>
