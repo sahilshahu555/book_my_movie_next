@@ -8,6 +8,7 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
   const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', ];
   const numSeatsPerRow = [16, 16,  13, 13 ,13,16, 16 ]; // Number of seats in each row
   
+   
 
 // for disabled button seats which is booked previously
    const isSeatBooked = (row, seat) => {
@@ -37,9 +38,9 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
   return (
     <div className="seating-arrangement p-0.5 mt-10 w-full flex justify-center flex-col items-center">
       <h2 className="text-center mb-5 font-bold text-blue-400 text-2xl">Seating Arrangement</h2>
-      <div className='flex flex-col-reverse lg:flex-row  gap-0 lg:gap-0 justify-around p-2'>
+      <div className='flex flex-col-reverse md:flex-row  gap-0 lg:gap-0 justify-around p-2'>
 
-          <div classNmae="flex flex-col ">
+          <div className=" ">
              <BookingForm selectedSeats={selectedSeats} handleBooking={handleBooking} />
               {/* <BookingDetails bookings={bookings} /> */}
           </div>
@@ -47,7 +48,7 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
           <div className="bg-slate-200 p-1 md:p-5 py-2 lg:px-8 md:py-5 border-2 border-white  lg:rounded-tr-xl  lg:rounded-br-xl">
 
           {rows.map((row, rowIndex) => (
-            <>
+            <div key={rowIndex}>
             <span className={` ${row == "A"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-500 w-24 md:w-32 m-auto rounded-xl p-1`}>{row=== "A"?"Premium Class":""}</span>
 
             <span className={` ${row == "C"? "block":"hidden"} text-center my-1 md:mb-2  text-[10px] md:text-xs text-white bg-blue-500 w-24 md:w-32 m-auto rounded-xl p-1`}>Gold Class</span>
@@ -75,7 +76,7 @@ const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBoo
               ))}
               </div>
             </div>
-            </>
+            </div>
           ))}
 
           </div>

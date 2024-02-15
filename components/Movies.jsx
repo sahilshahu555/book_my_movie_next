@@ -50,9 +50,11 @@ const Movies = () => {
       <h1 className="text-2xl mt-10 text-white text-center bg-blue-300  w-52 rounded mx-auto ">New Movies </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-8 py-10">
         {data.map((elm,i)=>(
-         <Link href={`/book/movie${i+1}`}>
-           <Image key={i} className=" w-40 md:w-56 m-4 md:m-5  h-[18rem] md:h-[20rem] rounded-xl shadow-lg shadow-blue-300 " src={elm.image} width={200} height={200}/>
+          <div key={i}>
+         <Link href={`/bookmovie/movie1`}>
+           <Image  className=" w-40 md:w-56 m-4 md:m-5  h-[18rem] md:h-[20rem] rounded-xl shadow-lg shadow-blue-300 " src={elm.image} alt="photo" width={200} height={200}/>
          </Link>
+         </div>
         ))}
       </div>
     </div>
