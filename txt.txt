@@ -1,2 +1,7 @@
-NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+BASE_URL=http://localhost:3000
 MONGO_URL=mongodb+srv://sahilshahu555:harsh123123123@cluster0.ehyj2m8.mongodb.net
+GOOGLE_ID=1047037089153-fh58eh0q631coaqk4auruolvpfo9kpgr.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+NEXTAUTH_URL=HTTP://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=weEi/oGsoC4CbTWDpDQuvv6zyZxm7JO/8t0CYCdIfFA=

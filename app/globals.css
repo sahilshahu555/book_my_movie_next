@@ -59,3 +59,11 @@ body {
     padding:1px;
   }
 }
+
+.black_btn {
+  @apply rounded-full border hover:text-black border-black bg-red-500 py-1 px-3 text-white transition-all hover:bg-white  text-center text-sm flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full bg-white border border-black  py-1 px-3 text-black transition-all hover:bg-black hover:text-white text-center text-sm flex items-center justify-center ; 
+}
