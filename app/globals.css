@@ -60,10 +60,21 @@ body {
   }
 }
 
+/* Nav Component */
+.logo_text {
+  @apply max-sm:hidden  font-semibold text-lg text-black tracking-wide;
+}
+
+.dropdown {
+  @apply   w-full ml-2 rounded-lg   flex flex-col gap-2 justify-end items-end;
+}
+
+
+
 .black_btn {
-  @apply rounded-full border hover:text-black border-black bg-red-500 py-1 px-3 text-white transition-all hover:bg-white  text-center text-sm flex items-center justify-center;
+  @apply rounded-full  bg-red-500 py-1.5 px-5 text-white transition-all hover:bg-white  hover:text-black text-center text-sm  flex items-center justify-center;
 }
 
 .outline_btn {
-  @apply rounded-full bg-white border border-black  py-1 px-3 text-black transition-all hover:bg-black hover:text-white text-center text-sm flex items-center justify-center ; 
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm  flex items-center justify-center;
 }

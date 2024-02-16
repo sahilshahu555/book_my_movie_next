@@ -9,7 +9,7 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   const [providers, setProviders] = useState(null);
-  const [toggleDropdown, setToggleDropdown] = useState(false);
+  const [toggleDropdown, setToggleDropdown] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -35,21 +35,71 @@ const Navbar = () => {
 
             {/* <button className='bg-blue-500 text-white text-md hover:text-black hover:bg-blue-400 px-3  rounded'> Profile </button> */}
               {/* Desktop Navigation */}
-      <div className='sm:flex hidden'>
-        {session?.user ? (
-          <div className='flex gap-3 md:gap-5'>
-          
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className='rounded-full'
-                alt='profile'
-              />
+            <div className='sm:flex hidden'>
+              {session?.user ? (
+                <div className='flex gap-3 md:gap-5'>
+                
+                    <Image
+                      src={session?.user.image}
+                      width={37}
+                      height={37}
+                      className='rounded-full'
+                      alt='profile'
+                    />
 
-             <button type='button' onClick={signOut} className='outline_btn'>
-              Sign Out
-            </button>
+                  <button type='button' onClick={signOut} className='outline_btn'>
+                    Sign Out
+                  </button>
+                  
+                </div>
+              ) : (
+                <>
+                  {providers &&
+                    Object.values(providers).map((provider) => (
+                      <button
+                        type='button'
+                        key={provider.name}
+                        onClick={() => {
+                          signIn(provider.id);
+                        }}
+                        className='black_btn'
+                      >
+                        Sign in
+                      </button>
+                    ))}
+                </>
+              )}
+            </div>
+
+        </div>
+        {/* <div className='Mobile md:hidden'>world</div> */}
+          {/* Mobile Navigation */}
+      <div className='sm:hidden flex relative'>
+        {session?.user ? (
+          <div className='flex'>
+            <Image
+              src={session?.user.image}
+              width={37}
+              height={37}
+              className='rounded-full mr-2'
+              alt='profile'
+              onClick={() => setToggleDropdown(!toggleDropdown)}
+            />
+
+            
+              
+               
+                <button
+                  type='button'
+                  onClick={() => {
+                    setToggleDropdown(false);
+                    signOut();
+                  }}
+                  className='  black_btn'
+                >
+                  Sign Out
+                </button>
+              
             
           </div>
         ) : (
@@ -70,9 +120,6 @@ const Navbar = () => {
           </>
         )}
       </div>
-
-        </div>
-        {/* <div className='Mobile md:hidden'>world</div> */}
     </div>
   )
 }
