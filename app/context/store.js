@@ -95,7 +95,7 @@ export const GlobalContextProvider=({children})=>{
           }
     
       } catch (error) {
-          alert(error.message) // Error Message
+          alert(error) // Error Message
           console.log(error)
       }
       }
