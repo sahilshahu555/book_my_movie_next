@@ -15,13 +15,6 @@ const Hero = () => {
   
     },
     {
-      image:"https://assetscdn1.paytm.com/images/catalog/view_item/2465377/1706813296995.jpg?format=webp&imwidth=1024",
-      title:"Washing & Detailing",
-      main:"Quality service for you",
-      desc:"Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac"
-
-    },
-    {
         image:"https://assetscdn1.paytm.com/images/catalog/view_item/2491597/1707459414970.jpg?format=webp&imwidth=1024",
         title:"Washing & Detailing",
         main:"High Quality of Washing",

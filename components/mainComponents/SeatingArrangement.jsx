@@ -1,39 +1,18 @@
 "use client"
 import React,{useState} from 'react';
-import BookingForm from '@/components/test/BookingForm';
-import BookingDetails from '@/components/test/BookingDetails';
+import BookingForm from '@/components/mainComponents/BookingForm';
+import { useGlobalContext } from '@/app/context/store'
 
 
-const SeatingArrangement = ({ selectedSeats, onSeatSelect, onSeatDeselect,allBookingSeats ,handleBooking,bookings }) => {
+
+const SeatingArrangement = () => {
+
+
+  const {selectedSeats, handleBooking,isSeatBooked,isSeatSelected ,handleSeatClick} =useGlobalContext();
+  
   const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', ];
   const numSeatsPerRow = [16, 16,  13, 13 ,13,16, 16 ]; // Number of seats in each row
   
-   
-
-// for disabled button seats which is booked previously
-   const isSeatBooked = (row, seat) => {
-    return allBookingSeats.includes(`${row}${seat}`);
-  };
-//
-
-// for selecting seats 
-  const isSeatSelected = (row, seat) => {
-    return selectedSeats.includes(`${row}${seat}`);
-  };
-
-  const handleSeatClick = (row, seat) => {
-    const seatId = `${row}${seat}`;
-    if (isSeatSelected(row, seat)) {
-      onSeatDeselect(seatId);
-    } else {
-      onSeatSelect(seatId);
-    }
-  };
-
-// 
-
-  
-
 
   return (
     <div className="seating-arrangement p-0.5 mt-10 w-full flex justify-center flex-col items-center">

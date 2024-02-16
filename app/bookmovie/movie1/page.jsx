@@ -1,82 +1,31 @@
 "use client"
-import React, { useState ,useEffect} from 'react';
-import SeatingArrangement from '@/components/test/SeatingArrangement';
-import BookingDetails from '@/components/test/BookingDetails';
+import React, { useEffect} from 'react';
+import SeatingArrangement from '@/components/mainComponents/SeatingArrangement';
+import BookingDetails from '@/components/mainComponents/BookingDetails';
 import { useGlobalContext } from '@/app/context/store'
 // import BookingForm from '@/components/test/BookingForm';
 
 const TestPage = () => {
-  const {bookings, setBookings,allBookingSeats, setAllBookingSeats,selectedSeats, setSelectedSeats} =useGlobalContext();
+  const {bookings, setBookings, fetchBooking, allBookingFun,allBookingFun1 } =useGlobalContext();
 
-  const fetchBooking= async()=>{
-    try {
-      const res = await fetch(`/api/movie`)
-      // Create Data 
-      const data = await res.json();
-      setBookings(data.data)
-      
-    } catch (error) {
-        alert(error.message) // Error Message
-        console.log(error)
-    }
-   
-  }
-
-  useEffect(() => {
-    fetchBooking();
-    
-  }, [setBookings])
   
-  const allBooking= async()=>{
-    await bookings?.forEach((elm)=>{
-      console.log(elm.selectedSeats)
-      // setAllBookingSeats([...allBookingSeats,...elm.selectedSeats])
-      allBookingSeats.push(...elm.selectedSeats)
-    })
-  }
 
-   useEffect(() => { allBooking() }, [bookings])
+//fetching all book seats 
+  useEffect(() => { fetchBooking(); }, [setBookings])
+ 
+// pushing book seats to allBookSeats array
+  useEffect(() => { allBookingFun() }, [bookings])
 
 // updating book seats on UI start
-   const allBooking1= async()=>{
-    await bookings?.forEach((elm)=>{
-     
-      setAllBookingSeats([...allBookingSeats,...elm.selectedSeats])
-     
-    })
-  }
-
-   useEffect(() => { allBooking1() }, [bookings])
-
-   // updating book seats on UI end
- 
- 
-  const handleBooking = async(booking) => {
-    setBookings([...bookings, booking]);
-    setSelectedSeats([]);
-    
-  };
-
-  
-  
-  const handleSeatSelect = (seat) => {
-    setSelectedSeats([...selectedSeats, seat]);
-  };
-  
-  const handleSeatDeselect = (seat) => {
-    setSelectedSeats(selectedSeats.filter(s => s !== seat));
-  };
+  useEffect(() => { allBookingFun1() }, [bookings])
 
  
   return (
     <div>
-     
-        <SeatingArrangement selectedSeats={selectedSeats} onSeatSelect=    {handleSeatSelect}  onSeatDeselect={handleSeatDeselect} allBookingSeats={allBookingSeats} handleBooking={handleBooking} bookings={bookings} />
+        <SeatingArrangement  />
        
         <BookingDetails bookings={bookings} />
 
-        
-      
     </div>
   );
 };

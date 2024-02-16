@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='border-t p-2 text-center bg-blue-300'>
+    <div id='footer' className='border-t p-2 text-center bg-blue-300'>
       <div className='logo'>
          <h1 className='text-blue-400 text-xl font-[900] my-2 w-40 m-auto  bg-white  px-2 rounded-xl flex'>Book <Image width={30} height={10} alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIw5fZnR-DK3elMUUx0mdigA42aRQIZvlompLRDhqEU5asPEcTUCWk&usqp=CAE&s"
             /> Movie</h1>

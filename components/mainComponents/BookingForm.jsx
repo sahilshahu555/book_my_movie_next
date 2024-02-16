@@ -1,64 +1,12 @@
 "use client"
 import { useGlobalContext } from '@/app/context/store'
-import { useRouter } from 'next/navigation'
 
+const BookingForm = () => {
 
-const BookingForm = ({ selectedSeats, handleBooking }) => {
   const {username, setUsername,date, setDate,time,setTime,
-          numTickets, setNumTickets} =useGlobalContext();
-
-  const router = useRouter();
-
-  const saveBooking= async(booking)=>{
-    try {
-      const res = await fetch(`/api/movie`, {
-          method: 'POST',
-          headers: {
-              "content-type": "application/json"
-          },
-          body: JSON.stringify(booking)
-      })
-
-      // Create Data 
-      const data = await res.json();
-      alert(data?.message) // Success Message
-      if(data?.message === "Booking created successfully"){
-      // router.push('/')
-      }
+          numTickets, setNumTickets, handleBooking1} =useGlobalContext();
 
 
-
-  } catch (error) {
-      alert(error.message) // Error Message
-      console.log(error)
-  }
-}
-
-  const handleBooking1 = async(e) => {
-    e.preventDefault()
-    if (!username) { alert("Please Provide UserName ") 
-    return ;}
-    if (!date) { alert("Please Enter Date ") 
-    return ;}
-    if (!time) { alert("Please Select Movie Timing ") 
-    return ;}
-    if (selectedSeats.length !== numTickets ) { alert(`Please Select  ${numTickets} ${numTickets>1?"seats":"seat"} from ticket Bookig Table.`) 
-    return ;}
-
-    if (username && selectedSeats.length === numTickets && date) {
-      const booking={ username, selectedSeats, date, time }
-      handleBooking(booking);
-      saveBooking(booking);
-      setUsername('')
-      setNumTickets(1)
-      setDate('')
-      setTime('')
-
-      // alert("Congratulations, Tickets Booking Successful")
-    } 
-  
-    
-  };
 
   return (
     <div className='flex flex-col  justify-between border-2 border-white   lg:rounded-tl-xl  lg:rounded-bl-xl bg-blue-300 h-[25rem] p-5'>
@@ -94,7 +42,7 @@ const BookingForm = ({ selectedSeats, handleBooking }) => {
 
       <label>Select No. of Tickets</label>
       <select className='border rounded-md p-0.5 ' value={numTickets} onChange={(e) => setNumTickets(parseInt(e.target.value))}>
-        {[...Array(8).keys()].map(i => (
+        {[...Array(4).keys()].map(i => (
           <option key={i+1} value={i+1}>{i+1}</option>
         ))}
       </select>

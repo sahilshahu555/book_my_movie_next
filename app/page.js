@@ -7,36 +7,29 @@ import { useGlobalContext } from '@/app/context/store'
 
 const Home = () => {
 
-  const {bookings,setBookings,allBookingSeats} =useGlobalContext()
+  const {bookings,setBookings,allBookingSeats,fetchBooking,allBookingFun} =useGlobalContext()
 
-  const fetchBooking= async()=>{
-    try {
-      const res = await fetch(`/api/movie`)
-      // Create Data 
-      const data = await res.json();
-      setBookings(data.data)
+  // const fetchBooking= async()=>{
+  //   try {
+  //     const res = await fetch(`/api/movie`)
+  //     // Create Data 
+  //     const data = await res.json();
+  //     setBookings(data.data)
       
-    } catch (error) {
-        alert(error.message) // Error Message
-        console.log(error)
-    }
+  //   } catch (error) {
+  //       alert(error.message) // Error Message
+  //       console.log(error)
+  //   }
    
-  }
+  // }
 
   useEffect(() => {
     fetchBooking();
     
   }, [setBookings])
 
-  const allBooking= async()=>{
-    await bookings?.forEach((elm)=>{
-      console.log(elm.selectedSeats)
-      // setAllBookingSeats([...allBookingSeats,...elm.selectedSeats])
-      allBookingSeats.push(...elm.selectedSeats)
-    })
-  }
 
-   useEffect(() => { allBooking() }, [bookings])
+   useEffect(() => { allBookingFun() }, [bookings])
 
  
   return (
