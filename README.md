@@ -14,7 +14,9 @@ app/
 ├─ api/
 ├─ bookmovie/movi1
 ├─ page.js 
-
+components/
+Database/
+Models/
 <!-- ## Video Walkthrough of the project
 Attach a very short video walkthough of all of the features [ 1 - 3 minutes ] -->
 
