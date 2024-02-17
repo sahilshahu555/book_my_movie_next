@@ -48,11 +48,11 @@ const Movies = () => {
   return (
     <div className='mt-5'>
       <h1 className="text-2xl mt-10 text-white text-center bg-blue-300  w-52 rounded mx-auto ">New Movies </h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-10 py-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-10 py-10 ">
         {data.map((elm,i)=>(
-          <div key={i}>
+          <div key={i} >
          <Link href={`/bookmovie/movie1`}>
-           <Image  className=" w-40 md:w-52 mx-2.5 my-5 md:m-10  h-[18rem] md:h-[20rem] rounded-xl shadow-lg shadow-red-500 " src={elm.image} alt="photo" width={200} height={200}/>
+           <Image  className=" w-40 md:w-52 mx-2.5 my-5 md:m-10  h-[18rem] md:h-[20rem] rounded-xl shadow-lg shadow-blue-300 " src={elm.image} alt="photo" width={200} height={200}/>
          </Link>
          </div>
         ))}
