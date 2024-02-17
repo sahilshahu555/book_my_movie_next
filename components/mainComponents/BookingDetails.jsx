@@ -10,7 +10,7 @@ const BookingDetails = ({ bookings }) => {
         {bookings.length<=0 ?(
           <h2 className="text-center mb-5 font-bold text-white  m-auto text-lg my-2">Please Book Movie Tickets</h2>
         ):(bookings?.map((booking, index) => (
-          <ul key={index} className="flex flex-col justify-between bg-blue-300 p-5 w-64 h-52 md:h-44 m-auto  rounded-xl text-sm list-disc -pt-2 shadow-lg shadow-red-500" >
+          <ul key={index} className="flex flex-col justify-between bg-blue-300 p-5 w-64 h-52 md:h-52 m-auto  rounded-xl text-sm list-disc -pt-2 shadow-lg shadow-red-500" >
             <h1 className="text-center font-bold text-lg text-white">{`${booking?.username.charAt(0).toUpperCase()}${booking?.username.slice(1)}`}</h1> 
             <li className="">No. of Tickets :- {booking?.selectedSeats?.length}</li>
             <li>Date :- {booking.date}</li>
