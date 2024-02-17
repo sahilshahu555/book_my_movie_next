@@ -11,9 +11,11 @@ Fullstack - Next JS
 
 ## Directory Structure
 app/
-├─ api/
-├─ bookmovie/movi1
-├─ page.js
+   ├─ api/
+
+   ├─ bookmovie/movi1
+
+   ├─ page.js
 
 components/
 
