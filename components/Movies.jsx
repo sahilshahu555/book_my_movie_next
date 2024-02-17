@@ -47,7 +47,7 @@ const Movies = () => {
       ]
   return (
     <div className='mt-5'>
-      <h1 className="text-2xl mt-10 text-white text-center bg-blue-300  w-52 rounded mx-auto ">Book Movie Tickets </h1>
+      <h1 className="text-2xl mt-10 text-white text-center bg-blue-300  w-64 rounded mx-auto ">Book Movie Tickets </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-10 py-10 ">
         {data.map((elm,i)=>(
           <div key={i} >
