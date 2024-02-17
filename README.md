@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Book My Movie
 
-## Getting Started
+## Introduction
+Book My Movie is India's leading entertainment destination and the one-stop-shop for every out-of-home entertainment need.
 
-First, run the development server:
+## Project Type
+Fullstack - Next JS
+
+## Deplolyed App
+<a href="https://bookmymovie1.netlify.app" target="_blank">Project Link </a> 
+
+## Directory Structure
+app/
+├─ api/
+├─ bookmovie/movi1
+├─ page.js 
+
+<!-- ## Video Walkthrough of the project
+Attach a very short video walkthough of all of the features [ 1 - 3 minutes ] -->
+
+<!-- ## Video Walkthrough of the codebase
+Attach a very short video walkthough of codebase [ 1 - 5 minutes ] -->
+
+## Features
+The key features of your application.
+
+- Users can create account and sign in with the account
+- Users can see the movies and movies details
+- Users can Book movie tickets 
+
+<!-- ## design decisions or assumptions
+List your design desissions & assumptions -->
+
+## Installation & Getting started
+<!-- Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc. -->
 
 ```bash
+npx create-next-app@latest 
+cd book-my-movies-project
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- ## Usage
+Provide instructions and examples on how to use your project.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+# Example
+``` -->
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<!-- Include screenshots as necessary. -->
 
-## Learn More
+<!-- ## Credentials
+Provide user credentials for autheticated pages -->
 
-To learn more about Next.js, take a look at the following resources:
+<!-- ## APIs Used
+If your application relies on external APIs, document them and include any necessary links or references. -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Endpoints
+<a href="https://bookmymovie1.netlify.app/api/movie" target="_blank">Project BackEnd API Link </a> 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technology Stack
+ The following technologies used in the project.
+- Next.js
+- React.js
+- Tailwind CSS
+- Node.js
+- Express.js
+- MongoDB
+- Other libraries/modules
